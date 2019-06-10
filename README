@@ -1,0 +1,29 @@
+# web_scraping
+#####Autor: alfonsoma75
+
+Pequeño ejercicio de web scraping con python y beautifulsoup4, realizando la extracciónde formas diferentes.
+
+#####Utilización:
+>app = BolsaMadrid()  
+>data = app.get_data()  
+>app.to_csv() 
+
+### Mediamarkt
+Extrae los datos de la web de Mediamarkt. En esta web losdatos se construyen en parte HTML y en parte JavaScript.
+
+Para recuperar los datos se recuperan los enlaces y se van visitando uno a uno para extraer su contenido.
+
+Alf tener que ir entrando en varias webs, el resultado es funcional, pero lo hace ser muy lento y hacer demasiadas conexiones.
+
+### Amazon
+Extrae los datos de las ofertas en Amazon. Esta web genera las ofertas con JavaScript, lo ideal sería usar selenium para recuperar los datos dinámicos ya renderizados, en este caso realizamos la extracción directamente desde texto sin renderizar.
+
+Debido a que extraemos texto de JavaScript sin renderizar hay una limitación de 8 ofertas.
+
+Se utilizan técnicas de manejo de string para extraer los datos.
+
+### Bolsa de Madrid
+Extrae las acciones de la página de la Bolsa de Madrid.
+
+Extracción más sencilla dado que los datos están renderizados en una sola tabla.
+
